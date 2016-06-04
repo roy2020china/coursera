@@ -1,0 +1,60 @@
+/* used during my development process. for testing purpose only*/
+* { border: 1px black solid;}
+/**/
+* { border: none; box-sizing: border-box; text-align: center; border-collapse: collapse;}
+
+.row {  margin: 10px auto;}
+section { border: 1px black solid; background-color: #66eb66; float: left; margin: 0.5em 1.5%; padding: 0.5em;}/*light green*/
+div.container { border: 1px black solid; padding: 0.5em;}
+
+/* clear section floats, so that the actual width and height of div.container can change accordingly.*/
+div.container:first-child:before{ content: ""; display: block; clear: right; }
+div.container:last-child:after{ content: ""; display: block; clear: left; }
+
+/*Module 2 Coding Assignment 13. */
+div.container section > p { margin-top: 2.25em; padding: 0.5em;}
+
+body > div { display: none; }
+
+/*Module 2 Coding Assignment 12. */
+div.menu { border: 1px black solid; width: 25%; height: auto; padding: 0.5em; position: absolute; top: 0; right: 0;}
+
+/*different background colors for div.menu */
+div.container section:first-child > div.menu {background-color: #efd0d0;}
+div.container section:nth-child(2) > div.menu {background-color: #f19595;}
+div.container section:last-child > div.menu {background-color: #ec1a1a;}
+
+section { position: relative; }
+
+/*Module 2 Coding Assignment 9. */
+@media (max-width: 767px){
+  body > div#xs { display: block; }
+  .row { background-color: #f9f4cc; }
+}
+#xs section { width: 100%; }
+
+/*Module 2 Coding Assignment 10. */
+@media (min-width: 768px) and (max-width: 991px) {
+  body > div#sm { display: block;}
+  .row  { background-color: #e8e871;}/*light yellow*/
+}
+#sm section { width: 45%; }
+#sm section:nth-child(3) { width: 93%; }
+
+/*Module 2 Coding Assignment 11. */
+@media (min-width: 992px) and ( max-width: 1199px){
+  body > div#md { display: block;}
+  .row  { background-color: #b4b4ea; }/*light blue*/
+} 
+/* large devices, >= 1200px*/
+@media (min-width: 1200px){
+  body > div#lg { display: block;}
+  .row  { background-color: #c999c9;  }/*light purple*/
+}
+#md section, #lg section { width: 30%; }
+
+/*Module 2 Coding Assignment 15. */
+h3 { font-family: Georgia; font-size: 175%; }
+.menu { font-family: Lucida Console; font-size: 125%; }
+body > p:first-of-type { font-family: Courier New; font-weight: bold;}
+h4 { font-family: Arial black; }
